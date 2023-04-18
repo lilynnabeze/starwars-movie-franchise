@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
-import axios from "axios"
-
+import axios from "axios";
+import "../styles/Body.css";
 
 function Body() {
   const [data, setData] = useState(null);
@@ -46,16 +46,18 @@ function Body() {
     };
     getData();
   }, []);
-  
 
-
-console.log(data, 'data')
+  console.log(data, "data");
   return (
     <div>
-      <div>{loading && <div>Waiting...</div>}</div>
-      <div>{error && <div>{`${error}`}</div>}</div>
+      <div className="loading-container">
+        {loading && <div className="loading">Waiting...</div>}
+      </div>
+      <div className="error-container">
+        {error && <div className="error">{`${error}`}</div>}
+      </div>
 
-      <div>
+      <div className="movie-card-container">
         <MovieCard data={data} />
       </div>
     </div>
