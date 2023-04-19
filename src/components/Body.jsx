@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import axios from "axios";
 import "../styles/Body.css";
+import deathStar from '../assets/death-star.png'
 
 function Body() {
   const [data, setData] = useState(null);
@@ -49,9 +50,9 @@ function Body() {
 
   console.log(data, "data");
   return (
-    <div>
+    <div className="main">
       <div className="loading-container">
-        {loading && <div className="loading">Waiting...</div>}
+        {loading && <img className="loading" src={deathStar} />}
       </div>
       <div className="error-container">
         {error && <div className="error">{`${error}`}</div>}
