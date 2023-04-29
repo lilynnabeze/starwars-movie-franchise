@@ -13,7 +13,38 @@
   background-color: black;
   border-radius: 8px;
   z-index: 1;
+  /* background-image: url(../assets/bgCard1.0.png); */
+    
+}
+
+.bg_0 {
   background-image: url(../assets/bgCard1.0.png);
+
+}
+
+.bg_1 {
+  background-image: url(../assets/bgCard2.0.png);
+ 
+}
+
+.bg_2 {
+  background-image: url(../assets/bgCard3.0.png);
+ 
+}
+
+.bg_3 {
+  background-image: url(../assets/bgCard4.0.png);
+  
+}
+
+.bg_4 {
+  background-image: url(../assets/bgCard5.0.png);
+ 
+}
+
+.bg_5 {
+  background-image: url(../assets/bgCard6.0.png);
+ 
 }
 
 .movie-card:hover {
@@ -57,3 +88,6 @@ hr {
   color: rgb(243, 243, 6);
   font-size: 15px;
 }
+
+ 
+
