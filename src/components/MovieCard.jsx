@@ -8,9 +8,7 @@ import bgCard5 from "../assets/bgCard5.0.png";
 import bgCard6 from "../assets/bgCard6.0.png";
 
 function MovieCard({ data }) {
-  console.log(data);
-
-  const CardItem = data?.results?.map(
+  const CardItem = data.map(
     ({ episode_id, title, release_date, opening_crawl }, index) => {
       return (
         <li key={episode_id} className={`movie-card bg_${index}`}>

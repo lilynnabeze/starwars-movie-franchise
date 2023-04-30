@@ -2,42 +2,19 @@ import { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import axios from "axios";
 import "../styles/Body.css";
-import deathStar from '../assets/death-star.png'
+import deathStar from "../assets/death-star.png";
 
 function Body() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // useEffect(() => {
-  //   fetch(`https://swapi.dev/api/films`)
-  //     .then((response) => {
-  //       // if (!response.ok) {
-  //       //   throw new Error(`Page not found: Error ${response.status}`);
-  //       // }
-  //       // console.log(response.json() )
-  //       console.log(response)
-  //       return response.json();
-  //     })
-  //     .then((actualData) => {
-  //       setData(actualData);
-  //       // setError(null);
-  //     })
-  //     .catch((error) => {
-  //       setError(error.message);
-  //       setData(null);
-  //     })
-  //     .finally(() => {
-  //       setLoading(false);
-  //     });
-  // }, []);
-
   useEffect(() => {
     const getData = async () => {
       try {
         const response = await axios.get(`https://swapi.dev/api/films`);
-        setData(response.data);
-        // setError(null);
+        setData(response.data.results);
+        setError(null);
       } catch (err) {
         setError(err.message);
         setData(null);
@@ -48,7 +25,6 @@ function Body() {
     getData();
   }, []);
 
-  console.log(data, "data");
   return (
     <div className="main">
       <div className="loading-container">
@@ -59,7 +35,7 @@ function Body() {
       </div>
 
       <div className="movie-card-container">
-        <MovieCard data={data} />
+        {data && <MovieCard data={data} />}
       </div>
     </div>
   );
