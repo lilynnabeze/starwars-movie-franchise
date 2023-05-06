@@ -1,0 +1,93 @@
+.movie-card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.movie-card {
+  width: 350px;
+  height: 315px;
+  padding: 23px;
+  margin: auto;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 8px;
+  z-index: 1;
+  /* background-image: url(../assets/bgCard1.0.png); */
+    
+}
+
+.bg_0 {
+  background-image: url(../assets/bgCard1.0.png);
+
+}
+
+.bg_1 {
+  background-image: url(../assets/bgCard2.0.png);
+ 
+}
+
+.bg_2 {
+  background-image: url(../assets/bgCard3.0.png);
+ 
+}
+
+.bg_3 {
+  background-image: url(../assets/bgCard4.0.png);
+  
+}
+
+.bg_4 {
+  background-image: url(../assets/bgCard5.0.png);
+ 
+}
+
+.bg_5 {
+  background-image: url(../assets/bgCard6.0.png);
+ 
+}
+
+.movie-card:hover {
+  box-shadow: 0 0 10px 2px rgb(81, 178, 243);
+}
+
+.movie-card-heading {
+  margin-bottom: 17px;
+}
+
+.title {
+  font-size: 24px;
+  color: transparent;
+  text-shadow: 0 0 1px white;
+}
+
+.release-date {
+  font-size: 14px;
+  color: rgb(131, 131, 131);
+}
+
+.opening-crawl {
+  margin-bottom: 25px;
+  font-size: 17px;
+  color: transparent;
+  text-shadow: 0 0 0.5px white;
+  line-height: 22px;
+}
+
+hr {
+  height: 2px;
+  border-color: rgb(248, 70, 70);
+  opacity: 0.5;
+}
+
+.more-info-wrapper {
+  margin-top: 12px;
+}
+
+.more-info {
+  color: rgb(243, 243, 6);
+  font-size: 15px;
+}
+
+ 
+
