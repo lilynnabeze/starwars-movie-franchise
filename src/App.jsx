@@ -1,7 +1,9 @@
-import { useState } from "react";
+// import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import { Logo } from "./components/Header";
 import Header from "./components/Header";
-import Body from "./components/Body";
+import Home from "./Pages/Home";
+import Movie from "./Pages/Movie";
 
 function App() {
   return (
@@ -9,7 +11,10 @@ function App() {
       <Header>
         <Logo />
       </Header>
-      <Body />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/movie/:id" element={<Movie />} />
+      </Routes>
     </div>
   );
 }

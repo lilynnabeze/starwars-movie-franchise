@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import MovieCard from "./MovieCard";
 import axios from "axios";
 import "../styles/Body.css";
 import deathStar from "../assets/death-star.png";
+import MovieCard from "../components/MovieCard";
 
 function Body() {
   const [data, setData] = useState(null);

@@ -1,11 +1,6 @@
 import React from "react";
 import "../styles/MovieCard.css";
-import bgCard1 from "../assets/bgCard1.0.png";
-import bgCard2 from "../assets/bgCard2.0.png";
-import bgCard3 from "../assets/bgCard3.0.png";
-import bgCard4 from "../assets/bgCard4.0.png";
-import bgCard5 from "../assets/bgCard5.0.png";
-import bgCard6 from "../assets/bgCard6.0.png";
+import { Link } from "react-router-dom";
 
 function MovieCard({ data }) {
   const CardItem = data.map(
@@ -29,15 +24,19 @@ function MovieCard({ data }) {
           </div>
           <hr />
           <div className="more-info-wrapper">
-            <a href="#" className="more-info">
+            <Link to={`/movie/${episode_id}`} className="more-info">
               More Info
-            </a>
+            </Link>
           </div>
         </li>
       );
     }
   );
-  return <ul className="movie-card-wrapper">{CardItem}</ul>;
+  return (
+    <div>
+      <ul className="movie-card-wrapper">{CardItem}</ul>
+    </div>
+  );
 }
 
 export default MovieCard;
