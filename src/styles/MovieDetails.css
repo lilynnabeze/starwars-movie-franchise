@@ -81,3 +81,33 @@
   list-style-type: disc;
   margin-left: 20px;
 }
+
+/* Styles within media queries */
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .moreinfo-container {
+    width: 70%;
+    padding: 35px 33px 75px;
+  }
+
+  .info-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin-left: 25px;
+  }
+}
+
+/* Phone */
+@media (max-width: 767px) {
+  .moreinfo-container {
+    width: 90%;
+    padding: 25px 23px 55px;
+  }
+
+  .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+}

@@ -3,7 +3,6 @@ import "../styles/MovieCard.css";
 import { Link } from "react-router-dom";
 
 function MovieCard({ data }) {
-  
   const CardItem = data.map(
     ({ url, title, release_date, opening_crawl }, index) => {
       const movieId = url.split("/").filter(Boolean).pop();
