@@ -3,10 +3,12 @@ import "../styles/MovieCard.css";
 import { Link } from "react-router-dom";
 
 function MovieCard({ data }) {
+  
   const CardItem = data.map(
-    ({ episode_id, title, release_date, opening_crawl }, index) => {
+    ({ url, title, release_date, opening_crawl }, index) => {
+      const movieId = url.split("/").filter(Boolean).pop();
       return (
-        <li key={episode_id} className={`movie-card bg_${index}`}>
+        <li key={movieId} className={`movie-card bg_${index}`}>
           <div className="movie-card-heading">
             <h3 className="title">{title}</h3>
             <p className="release-date">
@@ -24,7 +26,7 @@ function MovieCard({ data }) {
           </div>
           <hr />
           <div className="more-info-wrapper">
-            <Link to={`/movie/${episode_id}`} className="more-info">
+            <Link to={`/movie/${movieId}`} className="more-info">
               More Info
             </Link>
           </div>

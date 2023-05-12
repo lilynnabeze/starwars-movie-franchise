@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "../styles/Body.css";
+import "../styles/Home.css";
 import deathStar from "../assets/death-star.png";
 import MovieCard from "../components/MovieCard";
 
-function Body() {
+function Home() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -41,4 +41,4 @@ function Body() {
   );
 }
 
-export default Body;
+export default Home;

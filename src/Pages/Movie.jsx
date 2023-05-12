@@ -27,14 +27,14 @@ function Movie() {
   return (
     <div className="main">
       <div className="loading-container">
-        {loading && <img className="loading" src={deathStar} />}
+        {loading && <img className="loading" src={deathStar}  />}
       </div>
       <div className="error-container">
         {error && <div className="error">{`${error}`}</div>}
       </div>
 
       <div className="movie-card-container">
-        {data && <MovieDetails data={data} />}
+        {data && <MovieDetails data={data}  />}
       </div>
     </div>
   );
