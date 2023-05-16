@@ -1,0 +1,105 @@
+.moreinfo-container {
+  display: flex;
+  flex-direction: column;
+  width: 82%;
+  background-color: rgb(34, 33, 33);
+  border-radius: 6px;
+  padding: 30px 28px 65px;
+  font-family: "Open Sans", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.heading {
+  padding: 20px;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.info-title {
+  font-family: inherit;
+  font-size: 18px;
+  color: rgb(157, 157, 157);
+  margin-bottom: 15px;
+}
+
+.movie-title {
+  font-family: "Star Jedi", "Open Sans", sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin-bottom: 1.3rem;
+}
+
+.backhome-container {
+  color: rgb(157, 157, 157);
+}
+
+.description-container {
+  padding-top: 2px;
+  padding-bottom: 30px;
+}
+
+.characters-container {
+  border-top: 2px solid rgb(60, 60, 60);
+  padding: 30px 0;
+}
+
+.planets-container {
+  border-top: 2px solid rgb(60, 60, 60);
+  padding: 30px 0;
+}
+
+.starships-container {
+  border-top: 2px solid rgb(60, 60, 60);
+  padding: 30px 0;
+}
+
+.species-container {
+  border-top: 2px solid rgb(60, 60, 60);
+  padding: 30px 0;
+}
+
+.vehicles-container {
+  border-top: 2px solid rgb(60, 60, 60);
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+
+.info-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Styles within media queries */
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .moreinfo-container {
+    width: 70%;
+    padding: 35px 33px 75px;
+  }
+
+  .info-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    margin-left: 25px;
+  }
+}
+
+/* Phone */
+@media (max-width: 767px) {
+  .moreinfo-container {
+    width: 90%;
+    padding: 25px 23px 55px;
+  }
+
+  .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+}
