@@ -1,11 +1,3 @@
-*,
-::before,
-::after {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: inherit;
-}
-
 .moreinfo-container {
   display: flex;
   flex-direction: column;
